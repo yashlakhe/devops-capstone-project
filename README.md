@@ -4,7 +4,7 @@
 #  DevOps Capstone
 Reflection of the build status:<br>
 
-![Build Status](https://github.com/christian-schw/devops-capstone-project/actions/workflows/ci-build.yaml/badge.svg)
+![Build Status](https://github.com/yashlakhe/devops-capstone-project/actions/workflows/ci-build.yaml/badge.svg)
 
 <!-- TABLE OF CONTENTS -->
 <details open>
@@ -788,7 +788,7 @@ The resulting command:<br>
 oc create deployment accounts \
     --dry-run=client \
     --output=yaml > deploy/deployment.yaml \
-    --image=us.icr.io/sn-labs-christians21/accounts:1 \
+    --image=us.icr.io/$SN_ICR_NAMESPACE/accounts:1 \
     --replicas=3
 ```
 
@@ -906,7 +906,7 @@ The following command is used:<br>
 
 ```
 tkn pipeline start cd-pipeline \
-    -p repo-url="https://github.com/christian-schw/devops-capstone-project.git" \
+    -p repo-url="https://github.com/yashlakhe/devops-capstone-project.git" \
     -p branch="main" \
     -w name=pipeline-workspace,claimName=pipelinerun-pvc \
     -s pipeline \
@@ -935,7 +935,7 @@ The task is built into `tekton/pipeline.yaml`, applied with the command `oc appl
 
 ```
 tkn pipeline start cd-pipeline \
-    -p repo-url="https://github.com/christian-schw/devops-capstone-project.git" \
+    -p repo-url="https://github.com/yashlakhe/devops-capstone-project.git" \
     -p branch="main" \
     -w name=pipeline-workspace,claimName=pipelinerun-pvc \
     -s pipeline \
@@ -973,7 +973,7 @@ Then start the pipeline again to see the results of the `tests` task:<br>
 
 ```
 tkn pipeline start cd-pipeline \
-    -p repo-url="https://github.com/christian-schw/devops-capstone-project.git" \
+    -p repo-url="https://github.com/yashlakhe/devops-capstone-project.git" \
     -p branch="main" \
     -w name=pipeline-workspace,claimName=pipelinerun-pvc \
     -s pipeline \
@@ -1003,7 +1003,7 @@ Start the pipeline again - this time with an additional parameter (`build-image`
 
 ```
 tkn pipeline start cd-pipeline \
-    -p repo-url="https://github.com/christian-schw/devops-capstone-project.git" \
+    -p repo-url="https://github.com/yashlakhe/devops-capstone-project.git" \
     -p branch="main" \
     -p build-image="image-registry.openshift-image-registry.svc:5000/$SN_ICR_NAMESPACE/accounts:1" \
     -w name=pipeline-workspace,claimName=pipelinerun-pvc \
@@ -1032,7 +1032,7 @@ Start the pipeline again:<br>
 
 ```
 tkn pipeline start cd-pipeline \
-    -p repo-url="https://github.com/christian-schw/devops-capstone-project.git" \
+    -p repo-url="https://github.com/yashlakhe/devops-capstone-project.git" \
     -p branch="main" \
     -p build-image="image-registry.openshift-image-registry.svc:5000/$SN_ICR_NAMESPACE/accounts:1" \
     -w name=pipeline-workspace,claimName=pipelinerun-pvc \
@@ -1185,5 +1185,5 @@ You can now perform Tekton development locally, just like in the Cloud IDE lab e
 
 
 ## Contact
-If you have any questions, please feel free to reach out via email: christian-schwanse (at) gmx.net<br>
+If you have any questions, please feel free to reach out via email: lakheyash.05@gmail.com<br>
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
